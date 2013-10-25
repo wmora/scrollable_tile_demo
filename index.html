@@ -1,0 +1,167 @@
+<html>
+<head>
+    <link href="jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+
+  body {  
+    background: #1e242b;    
+  }
+
+  #scrollable-area {
+    width:800px;
+    height:600px;
+    overflow: auto;     
+    margin: 0 auto; 
+  }
+
+  .container {      
+    width: 23%;
+    height: 250px;
+    background:     url(http://dribbble.s3.amazonaws.com/users/23569/screenshots/1239017/crowned_traders_logo_1x.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;      
+    border: 5px solid #fff;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .content {    
+    position: absolute;  
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 15px 10px 15px;
+    box-sizing: border-box;  
+
+    h3 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #444; 
+      line-height: 10px;
+    }
+
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #777;        
+      line-height: 22px; 
+      font-size: 14px;
+    }
+  }  
+  .mCSB_scrollTools .mCSB_draggerRail {  
+    width: 0;
+    border-right: 1px solid #fff;
+  }
+  .mCSB_scrollTools .mCSB_draggerContainer {
+    left: -100px;
+  }
+  .mCSB_scrollTools .mCSB_dragger {    
+    background-image: url(scroll_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: rgba(0,0,0,0);
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="jquery.mCustomScrollbar.min.js"></script>
+</head>
+<body>
+  <div id="scrollable-area">
+    <div class="container">
+      <div class="content">
+        <h3>Heading</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h3>Heading</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h3>Heading</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h3>Heading</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+      </div>
+    </div>
+  
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h3>Heading</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(document).on("ready", function () {
+  $('.content').hide()
+  $('.container').hover(
+
+          // Over
+          function(){     
+            $( this ).find( ".content" ).fadeIn();
+          }
+          ,  
+          // Out
+          function(){
+            $( this ).find( ".content" ).fadeOut();
+          }
+      );
+  $("#scrollable-area").mCustomScrollbar({
+      scrollInertia:600,
+      autoDraggerLength:false
+  });
+});
+</script>
+</body>
+</html>
